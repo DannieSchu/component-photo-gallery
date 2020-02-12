@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App.js correctly 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Header here
+  </h1>
+  <div>
+    <p>
+      There are 
+      20
+       images in this array. 
+    </p>
+    <p>
+      Here's the first: 
+    </p>
+    <img
+      alt="unicorn"
+      src="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg"
+    />
+  </div>
+</div>
+`;
