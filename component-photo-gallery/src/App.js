@@ -9,8 +9,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <ImageList images = {images} />
+        <body>
+          <Header />
+          <ImageList images = {images} />
+        </body>
       </div>
     )
   }
