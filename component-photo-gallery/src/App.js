@@ -2,23 +2,22 @@ import React, { Component } from 'react';
 import images from './data';
 import Header from './Organisms/Header';
 import ImageList from './Organisms/ImageList';
-// import ImageItem from './Molecules/ImageItem';
 import './App.css';
+import './index.css';
 
 export default class App extends Component {
   state = { selected: null };
 
   render() {
-    const filteredCreatures = images.filter(creature => {
-      if (!this.state.selected) return true;
-      return creature.type === this.state.selected;
-    })
     const handleChange = e => {
       this.setState(
         { selected: e.target.value }
         )
     }
-
+    const filteredCreatures = images.filter(image => {
+      if (!this.state.selected) return true;
+      return image.keyword === this.state.selected;
+    }); 
     return (
       <div className="App">
           <Header />
@@ -37,7 +36,7 @@ export default class App extends Component {
                 <option value="dragon">Dragon</option>
             </select>
             <section className = "creatures-display">
-              <ImageList filteredCreatures = {filteredCreatures} />
+              <ImageList creatures = {filteredCreatures} />
             </section>
           </main>
       </div>

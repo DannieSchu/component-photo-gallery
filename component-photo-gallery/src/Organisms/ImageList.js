@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import ImageItem from '../Molecules/ImageItem'
+import images from '../data';
 
 export default class ImageList extends Component {
     render() {
-        const imageNode = this.props.filteredCreatures.map(image => <ImageItem image = {image} />
-    );
-    return (        
-        <ul>{ imageNode }</ul>
+    return (    
+        <ul>
+            {images.map((creature, index) => 
+            <ImageItem image = {creature} key={`${index} - ${creature.description}`} />)}
+        </ul>    
     )
 }
 }
