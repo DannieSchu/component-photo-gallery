@@ -4,8 +4,9 @@ import ImageItem from '../Molecules/ImageItem';
 
 
 test('renders ImageItem.js correctly', () => {
+    const item = {}
     const tree = renderer
-      .create(<ImageItem />)
+      .create(<ImageItem image={item}/>)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

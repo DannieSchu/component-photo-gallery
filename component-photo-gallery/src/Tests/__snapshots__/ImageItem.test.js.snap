@@ -1,3 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders ImageItem.js correctly 1`] = `<div />`;
+exports[`renders ImageItem.js correctly 1`] = `
+<li
+  className="flex-column"
+>
+  <h3 />
+  <div
+    className="image-container"
+  >
+    <img />
+  </div>
+  <p />
+</li>
+`;
